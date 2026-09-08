@@ -1,0 +1,12 @@
+# Abhängigkeiten
+node_modules/
+dist/
+.vite/
+
+# Sicherheit & Umgebungsvariablen
+.env
+.env.local
+
+# Betriebssystem-Reste
+.DS_Store
+Thumbs.db
