@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { Card } from './components/ui/card/card';
+import Textfield from './components/input/textfield/textfield';
+import Button from './components/input/button/button';
 // import { apiClient } from './services/apiClient';
 
 export default function App() {
@@ -6,14 +9,6 @@ export default function App() {
   const [regUserName, setRegUserName] = useState("");
   const [regUserEmail, setRegUserEmail] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
-
-  const handleNameInput = (e: React.ChangeEvent<HTMLTextAreaElement, HTMLTextAreaElement>): void => {
-    setRegUserName(e.target.value);
-  }
-
-  const handleEmailInput = (e: React.ChangeEvent<HTMLTextAreaElement, HTMLTextAreaElement>): void => {
-    setRegUserEmail(e.target.value);
-  }
 
   const handleRegister = async (e: React.SubmitEvent) => {
     e.preventDefault(); // Verhindert das Neuladen der Seite
@@ -45,13 +40,14 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: '20px', maxWidth: '800px', margin: '0 auto' }}>
-      <nav style={{ display: 'flex', gap: '20px', marginBottom: '20px', paddingBottom: '10px', borderBottom: '1px solid #eee' }}>
-        <button onClick={() => setPage('home')} style={{ cursor: 'pointer' }}>🏠 Startseite</button>
-        <button onClick={() => setPage('register')} style={{ cursor: 'pointer' }}>📝 Registrieren</button>
+    <div style={{ padding: '20px', margin: 'auto', display: 'flex',flexDirection:'column',alignItems:'center', gap: 25}}>
+      <Card type='wide'>
+      <nav style={{ display: 'flex', gap: '20px', marginBottom: '20px', paddingBottom: '10px'}}>
+        <Button type='primary' text='Home' handleClick={() => setPage('home')} />
+        <Button type='secondary' text='Registrieren' handleClick={() => setPage('register')}/>
       </nav>
-
-      <main>
+    </Card>
+      <main style={{width: '100%', display:'flex', justifyContent:'center', gap: 50}}>
         {page === 'home' && (
           <div>
             <h1>Shared Home</h1>
@@ -60,16 +56,16 @@ export default function App() {
         )}
 
         {page === 'register' && (
-          <div>
-            <h1>Registrierung</h1>
-            <form onSubmit={(e) => handleRegister(e)}>
-            <textarea value={regUserName} onChange={(e) => {handleNameInput(e)}} />
-            <textarea value={regUserEmail} onChange={(e) => {handleEmailInput(e)}} />
-            <button type='submit'>create user</button>
+          <Card type='square' width={'50%'} innerLayout='columnStart'>
+            <h1 style={{marginTop: 0, marginBottom: 24}}>Registrierung</h1>
+            <form onSubmit={(e) => handleRegister(e)} style={{display: 'flex', flexDirection:'column', gap: 20}}>
+              <Textfield value={regUserName} setValue={setRegUserName} label='Username' />
+              <Textfield value={regUserEmail} setValue={setRegUserEmail} label='Email'/>
+              <Button type='submit'text='Registrieren' handleClick={() => {}}/>
             </form>
             <br/>
             <text>{statusMessage}</text>
-          </div>
+          </Card>
         )}
       </main>
     </div>

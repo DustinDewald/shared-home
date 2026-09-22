@@ -1,0 +1,78 @@
+:root {
+  /* ==========================================
+     1. BRAND COLORS
+     ========================================== */
+  --color-purple-light: #f7f4ff;
+  --color-purple-muted: #e7e2f7;
+  --color-purple: #ab87ff;
+  --color-purple-hover: #9370e6;
+  --color-purple-dark: #7150bd;
+  --color-purple-dark-hover: #553996;
+
+  --color-orange-light: #fff2ec;
+  --color-orange: #ef8354;
+  --color-orange-hover: #d9784e;
+  --color-orange-dark: #b84e1d;
+
+  --color-teal: #0f7173;
+  --color-teal-hover: #0a5254;
+
+  /* ==========================================
+     2. NEUTRAL SYSTEM
+     ========================================== */
+  --color-bg-main: #f8fafc;
+  --color-bg-surface: #ffffff;
+  --color-bg-warm: #fffdf9;
+
+  --color-text-main: #282727;
+  --color-text-muted: #64748b;
+  --color-text-accent: #bb7758;
+  --color-text-inverted: #ffffff;
+
+  --color-grey-light: #f9f9f9;
+  --color-grey-default: #4f4f4f;
+  --color-grey-focus: #242424;
+
+  /* ==========================================
+     2. TYPOGRAPHY
+     ========================================== */
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --font-size-sm: 12px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --font-color-light: #ffff;
+  --font-color-dark: #2d2d2d;
+
+  /* ==========================================
+     3. SPACING (Layout & Padding)
+     ========================================== */
+  --space-xs: 4px;
+  --space-sm: 12px;
+  --space-md: 20px;
+  --space-lg: 32px;
+
+  /* ==========================================
+     4. SHAPES (Borders & Radius)
+     ========================================== */
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 50px;
+
+  --border-thin: 2px solid;
+  --border-thick: 3px solid;
+
+  /* ==========================================
+     5. ANIMATIONS
+     ========================================== */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/tokens';
+
+.c-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: var(--space-sm);
+
+  background-color: #fff;
+  border-radius: var(--radius-full);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(20px);
+
+  &__type {
+    &--wide {
+      height: auto;
+    }
+    &--square {
+      aspect-ratio: 1 / 1;
+    }
+    &--tall {
+      aspect-ratio: 2 / 4;
+    }
+  }
+  &__innerLayout {
+    &--rowStart {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    &--rowCenter {
+      flex-direction: row;
+      align-items: center;
+    }
+    &--rowEnd {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    &--columnStart {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    &--columnCenter {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &--columnEnd {
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}

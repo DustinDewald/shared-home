@@ -1,0 +1,52 @@
+@import '../../../styles/tokens';
+
+.c-button {
+  height: 42px;
+  width: fit-content;
+  padding: 0 var(--space-md);
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  outline: var(--border-thin) transparent;
+  transition: all 0.2s ease;
+
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-inverted);
+
+  &__primary {
+    background-color: var(--color-purple);
+
+    &:focus:focus-visible {
+      outline: var(--border-thin) var(--color-purple);
+      outline-offset: 2px;
+    }
+    &:hover {
+      background-color: var(--color-purple-hover);
+    }
+  }
+  &__secondary {
+    border: var(--border-thin) var(--color-purple-dark);
+    color: var(--color-purple-dark);
+    background-color: var(--color-purple-light);
+
+    &:focus:focus-visible {
+      outline: var(--border-thin) var(--color-purple-dark);
+      outline-offset: 2px;
+    }
+    &:hover {
+      background-color: var(--color-purple-muted);
+    }
+  }
+  &__submit {
+    background-color: var(--color-orange);
+
+    &:focus:focus-visible {
+      outline: var(--border-thin) var(--color-orange);
+      outline-offset: 2px;
+    }
+    &:hover {
+      background-color: var(--color-orange-hover);    
+    }
+  }
+}
